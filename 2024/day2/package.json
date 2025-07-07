@@ -1,0 +1,13 @@
+{
+  "name": "advent-of-code-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node solve.js"
+  },
+  "keywords": [],
+  "author": "Debopam Gupta",
+  "license": "MIT",
+  "description": ""
+}
