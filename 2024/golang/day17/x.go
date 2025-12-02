@@ -95,7 +95,6 @@ func p1(initA, initB, initC int, program []string) string {
 		operand := aoc.ParseNumOrPanic(program[ip+1])
 		// fmt.Println(opcode, operand)
 		val, wasJump := performOperation(opcode, operand)
-		fmt.Println("A=", formatBin(registerA))
 		if wasJump {
 			ip = val // jump ip to the operand
 		} else {
@@ -107,10 +106,6 @@ func p1(initA, initB, initC int, program []string) string {
 	}
 
 	return strings.TrimSuffix(output, ",")
-}
-
-func p2(program []string) int {
-	return 0
 }
 
 func main() {
@@ -133,28 +128,8 @@ func main() {
 
 	r1 := p1(ra, rb, rc, program)
 	fmt.Println("part 1:", r1)
-
-	// part 2, find the smallest register a value
-	// such that the output is the program itself
-	// ignore ra value from
-	registerA = 0
-	registerB = 0
-	registerC = 0
-
-	p2(program)
 }
 
-func formatBin(a int) string {
-	if a == 0 {
-		return "0"
-	}
-	s := ""
-	for a != 0 {
-		s = fmt.Sprint(a&1) + s
-		a = a >> 1
-	}
-	for len(s)%3 != 0 {
-		s = "0" + s
-	}
-	return s
+func p2(programstr string) {
+
 }
