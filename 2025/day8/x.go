@@ -101,10 +101,6 @@ func solve(positions []Position) {
 
 }
 
-func p2(positions []Position) int {
-	return 0
-}
-
 func main() {
 	infile := "./sample.txt"
 	arg := os.Args[1:]
