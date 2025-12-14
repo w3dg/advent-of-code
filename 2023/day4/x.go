@@ -41,7 +41,7 @@ func p1(cards []Card) int {
 	return r
 }
 
-func p2(cards []Card) int {
+func p2() int {
 	for _, v := range Wins {
 		for i := range v.wins {
 			newcardid := v.sourcecard + (i + 1)           // index to card number offset
@@ -116,6 +116,6 @@ func main() {
 	// for _, c := range cards {
 	// 	fmt.Println(c)
 	// }
-	r1, r2 := p1(cards), p2(cards)
+	r1, r2 := p1(cards), p2()
 	fmt.Println("Puzzle 1:", r1, "Puzzle 2:", r2)
 }
